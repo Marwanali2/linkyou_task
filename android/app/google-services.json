@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "127560089649",
+    "project_id": "linkyoutask-70ed0",
+    "storage_bucket": "linkyoutask-70ed0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127560089649:android:ea27ba4e7ae9e39b90d510",
+        "android_client_info": {
+          "package_name": "com.example.linkyou_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127560089649-ij6cpcft7q0hml61sn6tv5bksf4sfmea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbenzLnHyG7iGFwLoc09aXWdYcE-qYjHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127560089649-ij6cpcft7q0hml61sn6tv5bksf4sfmea.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "127560089649-878env809bn00rk3vl35bdi3ump7sj4q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.linkyouTask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
