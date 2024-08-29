@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:linkyou_task/core/routing/routes.dart';
+import 'package:linkyou_task/features/home/presentation/views/home_view.dart';
  
 
 import '../../features/Auth/Presentation/views/login_view.dart';
@@ -14,10 +15,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const LoginView(),
         );
-      // case Routes.kHome:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const HomeView(),
-      //   );
+      case Routes.kHome:
+        return MaterialPageRoute(
+          builder: (_) => const HomeView(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
