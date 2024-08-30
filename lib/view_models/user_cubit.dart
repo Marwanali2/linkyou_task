@@ -1,16 +1,16 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:linkyou_task/services/api_service.dart';
+import 'package:linkyou_task/repos/user_repository.dart';
 import 'package:linkyou_task/view_models/user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
-  final ApiService _apiService;
+  final UserRepository _userRepository;
 
-  UserCubit(this._apiService) : super(UserInitial());
+  UserCubit(this._userRepository) : super(UserInitial());
 
   Future<void> createUser(String name, String email) async {
     try {
       emit(UserLoading());
-      await _apiService.createUser(name, email);
+      await _userRepository.createUser(name, email);
       fetchUsers();
     } catch (e) {
       emit(UserError('Failed to create user: ${e.toString()}'));
@@ -20,7 +20,7 @@ class UserCubit extends Cubit<UserState> {
   Future<void> fetchUsers() async {
     try {
       emit(UserLoading());
-      final users = await _apiService.fetchUsers();
+      final users = await _userRepository.fetchUsers();
       emit(UserLoaded(users));
     } catch (e) {
       emit(UserError('Failed to fetch users: ${e.toString()}'));
