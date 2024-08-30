@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:linkyou_task/services/api_service.dart';
+import 'package:linkyou_task/core/Dependency_injection/service_locator.dart';
 import 'package:linkyou_task/view_models/user_cubit.dart';
 import 'package:linkyou_task/views/login_screen.dart';
 
@@ -17,7 +17,7 @@ class LinkyouTask extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => UserCubit(ApiService()),
+            create: (context) =>getIt<UserCubit>(),
           ),
         ],
         child: MaterialApp(

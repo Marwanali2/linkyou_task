@@ -11,37 +11,39 @@ class LoginScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserCubit, UserState>(
-      listener: (context, state) {
-        if (state is UserLoaded) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const UsersListScreen()),
-          );
-        } else if (state is UserError) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(state.message)),
-          );
-        }
-      },
-      builder: (context, state) {
-        if (state is UserLoading) {
-          return const Center(
-              child: CircularProgressIndicator(color: Colors.lightBlue));
-        } else {
-          return Center(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.sizeOf(context).width * 0.2,
+    return BlocListener<UserCubit, UserState>(
+        listener: (context, state) {
+          if (state is UserLoaded) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const UsersListScreen()),
+            );
+          } else if (state is UserError) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(state.message)),
+            );
+          } else if (state is UserLoading) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text(
+                  'Loading...',
+                  style: TextStyle(color: Colors.white),
+                ),
+                backgroundColor: Colors.lightBlue,
               ),
-              child: LoginButton(
-                onPressed: () => handleSignIn(context),
-                text: 'Login with Google',
-              ),
+            );
+          }
+        },
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.sizeOf(context).width * 0.2,
             ),
-          );
-        }
-      },
-    );
+            child: LoginButton(
+              onPressed: () => handleSignIn(context),
+              text: 'Login with Google',
+            ),
+          ),
+        ));
   }
 }
