@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:linkyou_task/core/Dependency_injection/service_locator.dart';
+import 'package:linkyou_task/core/routing/app_router.dart';
+import 'package:linkyou_task/core/routing/routes.dart';
 import 'package:linkyou_task/features/app/presentaion/manager/user_cubit.dart';
-import 'package:linkyou_task/features/app/presentaion/views/login_screen.dart';
 
 class LinkyouTask extends StatelessWidget {
   const LinkyouTask({super.key});
@@ -26,7 +27,8 @@ class LinkyouTask extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const LoginScreen(),
+        onGenerateRoute: AppRouter().generateRoute,
+          initialRoute: Routes.kMain,
         ),
       ),
     );
