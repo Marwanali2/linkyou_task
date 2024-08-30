@@ -24,13 +24,7 @@ class LoginScreenBody extends StatelessWidget {
             );
           } else if (state is UserLoading) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text(
-                  'Loading...',
-                  style: TextStyle(color: Colors.white),
-                ),
-                backgroundColor: Colors.lightBlue,
-              ),
+              const SnackBar(content: Text('Loading...')),
             );
           }
         },
