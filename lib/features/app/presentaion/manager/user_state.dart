@@ -1,4 +1,4 @@
-import 'package:linkyou_task/models/user_model.dart';
+import 'package:linkyou_task/features/app/data/models/user_model.dart';
 
 abstract class UserState {}
 

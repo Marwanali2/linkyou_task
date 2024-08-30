@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:linkyou_task/repos/user_repository.dart';
-import 'package:linkyou_task/view_models/user_state.dart';
+import 'package:linkyou_task/features/app/data/repos/user_repository.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_state.dart';
+
 
 class UserCubit extends Cubit<UserState> {
   final UserRepository _userRepository;

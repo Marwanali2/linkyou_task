@@ -1,5 +1,6 @@
-import 'package:linkyou_task/repos/user_repository.dart';
-import 'package:linkyou_task/services/api_service.dart';
+import 'package:linkyou_task/features/app/data/repos/user_repository.dart';
+import 'package:linkyou_task/features/app/data/services/api_service.dart';
+
 import '../models/user_model.dart';
 
 class UserRepositoryImpl implements UserRepository {

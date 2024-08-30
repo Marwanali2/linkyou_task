@@ -3,8 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:linkyou_task/view_models/user_cubit.dart';
-import 'package:linkyou_task/view_models/user_state.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_cubit.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_state.dart';
 
 Future<void> handleSignIn(BuildContext context) async {
   final GoogleSignIn googleSignIn = GoogleSignIn();

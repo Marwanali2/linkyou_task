@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:linkyou_task/core/networking/functions/functions.dart';
-import 'package:linkyou_task/view_models/user_cubit.dart';
-import 'package:linkyou_task/view_models/user_state.dart';
-import 'package:linkyou_task/views/users_list_screen.dart';
-import 'package:linkyou_task/views/widgets/login_button.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_cubit.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_state.dart';
+import 'package:linkyou_task/features/app/presentaion/views/users_list_screen.dart';
+import 'package:linkyou_task/features/app/presentaion/views/widgets/login_button.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({super.key});

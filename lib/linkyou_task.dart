@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:linkyou_task/core/Dependency_injection/service_locator.dart';
-import 'package:linkyou_task/view_models/user_cubit.dart';
-import 'package:linkyou_task/views/login_screen.dart';
+import 'package:linkyou_task/features/app/presentaion/manager/user_cubit.dart';
+import 'package:linkyou_task/features/app/presentaion/views/login_screen.dart';
 
 class LinkyouTask extends StatelessWidget {
   const LinkyouTask({super.key});
