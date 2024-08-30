@@ -1,7 +1,6 @@
 import 'dart:developer';
-
-import 'package:linkyou_task/core/networking/api_constants.dart';
 import 'package:dio/dio.dart';
+import 'package:linkyou_task/core/networking/api_constants.dart';
 
 class LoginApiServices {
   final Dio _dio = Dio(BaseOptions(baseUrl: ApiConstants.baseUrl));
